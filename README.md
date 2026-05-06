@@ -317,13 +317,6 @@ app.run(debug=True)  # Shows detailed error messages
 
 This project is open source and available under the MIT License.
 
-## 📞 Support
-
-For questions or issues:
-- Check the troubleshooting section
-- Review the code documentation
-- Create an issue in the repository
-
 ---
 
 **Built with ❤️ using Flask, scikit-learn, and modern web technologies**
