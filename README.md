@@ -5,7 +5,6 @@ A comprehensive machine learning-based web application for detecting fake produc
 
 ## 🌟 Features
 
-- **OAuth Authentication**: Secure login using Google OAuth
 - **Multiple ML Models**: Random Forest, Logistic Regression, and SVM classifiers
 - **Single Review Analysis**: Analyze individual reviews with confidence scores
 - **Batch Processing**: Upload CSV files for bulk review analysis
