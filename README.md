@@ -16,13 +16,11 @@ A comprehensive machine learning-based web application for detecting fake produc
 
 ### Backend (Flask)
 - RESTful API endpoints
-- OAuth integration with Authlib
 - Machine learning model integration
 - CSV file processing
 - Session management
 
 ### Frontend (HTML/CSS/JavaScript)
-- Bootstrap 5 responsive design
 - Interactive forms and dashboards
 - Real-time analysis results
 - File upload functionality
