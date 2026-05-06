@@ -313,10 +313,4 @@ app.run(debug=True)  # Shows detailed error messages
 4. Test thoroughly
 5. Submit pull request
 
-## 📝 License
 
-This project is open source and available under the MIT License.
-
----
-
-**Built with ❤️ using Flask, scikit-learn, and modern web technologies**
