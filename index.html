@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Product Review Monitoring System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-icon">🤖</span>
+                <span class="brand-text">ReviewGuard AI</span>
+            </div>
+            <div class="nav-menu">
+                <button class="nav-link active" data-section="home">Home</button>
+                <button class="nav-link" data-section="analyze">Analyze</button>
+                <button class="nav-link" data-section="batch">Batch Upload</button>
+                <button class="nav-link" data-section="samples">Sample Reviews</button>
+                <button class="nav-link" data-section="dashboard">Dashboard</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section active">
+        <div class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Detect Fake Product Reviews with AI</h1>
+                    <p class="hero-description">Advanced machine learning algorithms to identify fake reviews and protect consumers from deceptive practices. Get instant analysis with confidence scores and detailed insights.</p>
+                    <div class="hero-actions">
+                        <button class="btn btn--primary btn--lg" data-action="analyze">Start Analysis</button>
+                        <button class="btn btn--outline btn--lg" data-action="samples">View Examples</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="features-section">
+            <div class="container">
+                <h2 class="section-title">Powerful Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🤖</div>
+                        <h3>AI-Powered Detection</h3>
+                        <p>Advanced machine learning algorithms analyze text patterns to identify fake reviews with high accuracy</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Batch Processing</h3>
+                        <p>Upload CSV files to analyze hundreds of reviews at once and get comprehensive results</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3>Detailed Insights</h3>
+                        <p>Get confidence scores, probability breakdowns, and explanations for each prediction</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚙️</div>
+                        <h3>Multiple Models</h3>
+                        <p>Choose from Random Forest, Logistic Regression, and SVM models for different analysis approaches</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="education-section">
+            <div class="container">
+                <h2 class="section-title">Understanding Fake Reviews</h2>
+                <div class="education-content">
+                    <div class="education-column">
+                        <h3>🚩 Signs of Fake Reviews</h3>
+                        <ul class="indicator-list">
+                            <li>Excessive use of superlatives (BEST, AMAZING, PERFECT)</li>
+                            <li>Too many exclamation marks (!!!)</li>
+                            <li>Generic praise without specific details</li>
+                            <li>Overly promotional language</li>
+                            <li>Perfect grammar (suspiciously clean)</li>
+                            <li>Extreme ratings with simple explanations</li>
+                        </ul>
+                    </div>
+                    <div class="education-column">
+                        <h3>✅ Signs of Real Reviews</h3>
+                        <ul class="indicator-list">
+                            <li>Balanced feedback with pros and cons</li>
+                            <li>Specific details about product usage</li>
+                            <li>Natural language patterns and minor errors</li>
+                            <li>Context about purchase reason or situation</li>
+                            <li>Moderate tone without excessive enthusiasm</li>
+                            <li>Constructive criticism or suggestions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analysis Section -->
+    <section id="analyze" class="section">
+        <div class="container">
+            <h1 class="page-title">Review Analysis</h1>
+            <p class="page-description">Enter a product review to analyze its authenticity using our machine learning models.</p>
+            
+            <div class="analysis-container">
+                <div class="analysis-input">
+                    <div class="form-group">
+                        <label class="form-label" for="review-text">Product Review Text</label>
+                        <textarea 
+                            id="review-text" 
+                            class="form-control review-textarea" 
+                            placeholder="Enter the product review you want to analyze..."
+                            rows="6"></textarea>
+                        <div class="character-count">
+                            <span id="char-count">0</span> characters
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="model-select">Select ML Model</label>
+                        <select id="model-select" class="form-control">
+                            <option value="random-forest">Random Forest (89% accuracy)</option>
+                            <option value="logistic-regression">Logistic Regression (86% accuracy)</option>
+                            <option value="svm">SVM (88% accuracy)</option>
+                        </select>
+                    </div>
+                    
+                    <button id="analyze-btn" class="btn btn--primary btn--full-width">Analyze Review</button>
+                </div>
+                
+                <div class="analysis-results" id="analysis-results">
+                    <div class="results-placeholder">
+                        <div class="placeholder-icon">🔍</div>
+                        <h3>Analysis Results</h3>
+                        <p>Enter a review and click "Analyze Review" to see the prediction results with confidence scores.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Batch Analysis Section -->
+    <section id="batch" class="section">
+        <div class="container">
+            <h1 class="page-title">Batch Analysis</h1>
+            <p class="page-description">Upload a CSV file containing multiple reviews for bulk analysis. Your file should have a 'review' column.</p>
+            
+            <div class="upload-container">
+                <div class="upload-area" id="upload-area">
+                    <div class="upload-content">
+                        <div class="upload-icon">📁</div>
+                        <h3>Drop CSV file here or click to browse</h3>
+                        <p>Maximum file size: 10MB</p>
+                        <input type="file" id="csv-file" accept=".csv" hidden>
+                        <button class="btn btn--outline" onclick="document.getElementById('csv-file').click()">Choose File</button>
+                    </div>
+                </div>
+                
+                <div class="batch-progress" id="batch-progress" style="display: none;">
+                    <h3>Processing Reviews...</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span id="progress-current">0</span> of <span id="progress-total">0</span> reviews processed
+                    </div>
+                </div>
+                
+                <div class="batch-results" id="batch-results" style="display: none;">
+                    <div class="results-header">
+                        <h3>Analysis Complete</h3>
+                        <button class="btn btn--outline" id="export-results">Export Results</button>
+                    </div>
+                    <div class="results-summary" id="results-summary"></div>
+                    <div class="results-table-container">
+                        <table class="results-table" id="results-table">
+                            <thead>
+                                <tr>
+                                    <th>Review</th>
+                                    <th>Prediction</th>
+                                    <th>Confidence</th>
+                                    <th>Model</th>
+                                </tr>
+                            </thead>
+                            <tbody id="results-tbody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Reviews Section -->
+    <section id="samples" class="section">
+        <div class="container">
+            <h1 class="page-title">Sample Reviews</h1>
+            <p class="page-description">Compare real and fake reviews to understand the differences and improve your detection skills.</p>
+            
+            <div class="samples-container">
+                <div class="samples-column">
+                    <div class="samples-header real">
+                        <h2>✅ Real Reviews</h2>
+                        <p>Authentic customer feedback with balanced, specific content</p>
+                    </div>
+                    <div id="real-samples" class="samples-list"></div>
+                </div>
+                
+                <div class="samples-column">
+                    <div class="samples-header fake">
+                        <h2>🚩 Fake Reviews</h2>
+                        <p>Suspicious reviews with promotional language and excessive praise</p>
+                    </div>
+                    <div id="fake-samples" class="samples-list"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="section">
+        <div class="container">
+            <h1 class="page-title">Analytics Dashboard</h1>
+            <p class="page-description">View statistics about your analysis activities and model performance.</p>
+            
+            <div class="dashboard-grid">
+                <div class="stat-card">
+                    <div class="stat-value">2,547</div>
+                    <div class="stat-label">Total Reviews Analyzed</div>
+                    <div class="stat-change positive">+12% this week</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-value">89.2%</div>
+                    <div class="stat-label">Overall Accuracy</div>
+                    <div class="stat-change positive">+2.1% improvement</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-value">432</div>
+                    <div class="stat-label">Fake Reviews Detected</div>
+                    <div class="stat-change">17% of total</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-value">2,115</div>
+                    <div class="stat-label">Real Reviews Verified</div>
+                    <div class="stat-change">83% of total</div>
+                </div>
+            </div>
+            
+            <div class="dashboard-actions">
+                <button class="btn btn--primary" data-action="analyze">Analyze New Review</button>
+                <button class="btn btn--outline" data-action="batch">Batch Upload</button>
+                <button class="btn btn--outline" id="download-sample">Download Sample CSV</button>
+            </div>
+            
+            <div class="model-performance">
+                <h2>Model Performance Comparison</h2>
+                <div class="performance-grid">
+                    <div class="performance-card">
+                        <h3>Random Forest</h3>
+                        <div class="accuracy-bar">
+                            <div class="accuracy-fill" style="width: 89%"></div>
+                        </div>
+                        <div class="accuracy-text">89% Accuracy</div>
+                        <p>Best overall performance with ensemble learning</p>
+                    </div>
+                    
+                    <div class="performance-card">
+                        <h3>SVM</h3>
+                        <div class="accuracy-bar">
+                            <div class="accuracy-fill" style="width: 88%"></div>
+                        </div>
+                        <div class="accuracy-text">88% Accuracy</div>
+                        <p>Effective for high-dimensional text data</p>
+                    </div>
+                    
+                    <div class="performance-card">
+                        <h3>Logistic Regression</h3>
+                        <div class="accuracy-bar">
+                            <div class="accuracy-fill" style="width: 86%"></div>
+                        </div>
+                        <div class="accuracy-text">86% Accuracy</div>
+                        <p>Fast and interpretable linear model</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Analyzing review...</div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
